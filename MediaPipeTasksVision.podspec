@@ -18,8 +18,8 @@ Pod::Spec.new do |s|
       'frameworks/MediaPipeTasksCommon.xcframework'
     ]
     s.user_target_xcconfig = {
-      'OTHER_LDFLAGS[sdk=iphonesimulator*]' => '$(inherited) -force_load "$(PODS_ROOT)/MediaPipeTasksVision/frameworks/graph_libraries/libMediaPipeTasksCommon_simulator_graph.a" -Wl,-weak_reference_mismatches,weak',
-      'OTHER_LDFLAGS[sdk=iphoneos*]' => '$(inherited) -force_load "$(PODS_ROOT)/MediaPipeTasksVision/frameworks/graph_libraries/libMediaPipeTasksCommon_device_graph.a" -Wl,-weak_reference_mismatches,weak',
+      'OTHER_LDFLAGS[sdk=iphonesimulator*]' => '$(inherited) -force_load "/Users/karim/src/mediapipe-ios/frameworks/graph_libraries/libMediaPipeTasksCommon_simulator_graph.a" -Wl,-weak_reference_mismatches,weak',
+      'OTHER_LDFLAGS[sdk=iphoneos*]' => '$(inherited) -force_load "/Users/karim/src/mediapipe-ios/frameworks/graph_libraries/libMediaPipeTasksCommon_device_graph.a" -Wl,-weak_reference_mismatches,weak',
     }
     s.frameworks = 'Accelerate', 'CoreMedia', 'AssetsLibrary', 'CoreFoundation', 'CoreGraphics', 'CoreImage', 'QuartzCore', 'AVFoundation', 'CoreVideo'
     s.preserve_paths = 'frameworks/graph_libraries/*.a'
